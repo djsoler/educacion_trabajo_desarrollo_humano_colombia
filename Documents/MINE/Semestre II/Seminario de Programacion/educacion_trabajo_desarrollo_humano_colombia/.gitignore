@@ -24,3 +24,16 @@ data/
 # Otros
 .DS_Store
 *.log
+
+# Ignorar directorios y archivos comunes
+.anaconda/
+.conda/
+.continuum/
+.idlerc/
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+.local/
+.matplotlib/
+.vscode/
+*.vsidx
