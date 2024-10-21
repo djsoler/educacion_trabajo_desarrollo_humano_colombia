@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
-numpy = "^1.21.6"
+numpy = "1.21.6"
 scipy = "^1.11.4"
 streamlit = "^1.37.1"
 pandas = "^2.2.2"
