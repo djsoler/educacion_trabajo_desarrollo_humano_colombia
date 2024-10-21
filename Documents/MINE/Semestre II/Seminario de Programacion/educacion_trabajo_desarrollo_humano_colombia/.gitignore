@@ -1,3 +1,4 @@
+﻿
 # Entornos virtuales
 venv/
 *.pyc
@@ -7,7 +8,7 @@ venv/
 env/
 *.env
 
-# Archivos de configuraci�n de IDEs
+# Archivos de configuración de IDEs
 .vscode/
 .idea/
 *.swp
@@ -41,7 +42,7 @@ Desktop.ini
 Thumbs.db
 NTUSER.DAT*
 
-# Ignorar carpetas de configuraci�n
+# Ignorar carpetas de configuración
 .vscode/
 .anaconda/
 .conda/
@@ -63,19 +64,99 @@ johanna_soler_proyecto_1
 Proyecto_Final_DJSC_23-08-2024
 Git2
 Git
-Error en C�digo R_files
+Error en Código R_files
 
 # Ignorar archivos temporales de Word y Excel
 Documents/MINE/Semestre II/Seminario de Programacion/Ambientes - Primera Clase.txt
 Documents/MINE/Semestre II/Seminario de Programacion/Clase 2.docx
 Documents/MINE/Semestre II/Seminario de Programacion/Crear repositorio.docx
-Documents/MINE/Semestre II/Seminario de Programacion/Error en C�digo R.html
+Documents/MINE/Semestre II/Seminario de Programacion/Error en Código R.html
 Documents/MINE/Semestre II/Seminario de Programacion/GitHub - SP2024MINE_Proyecto_Julio.pdf
 ~$*
 *.vsidx
 
 # Ignorar carpetas especificas
-Documents/MINE/Semestre II/Seminario de Programacion/Error en C�digo R_files
+Documents/MINE/Semestre II/Seminario de Programacion/Error en Código R_files
+Documents/MINE/Semestre II/Seminario de Programacion/Git
+Documents/MINE/Semestre II/Seminario de Programacion/Git2
+Documents/MINE/Semestre II/Seminario de Programacion/Proyecto_Final_DJSC_23-08-2024
+Documents/MINE/Semestre II/Seminario de Programacion/Video/v2
+Documents/MINE/Semestre II/Seminario de Programacion/educacion_para_el_trabajo_y_desarrollo_humano_colombia
+
+# Entornos virtuales
+venv/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+*.env
+
+# Archivos de configuraciÃ³n de IDEs
+.vscode/
+.idea/
+*.swp
+
+# Archivos de Jupyter Notebook
+.ipynb_checkpoints/
+
+# Datos grandes
+*.csv
+*.json
+
+# Otros
+.DS_Store
+*.log
+
+# Ignorar directorios y archivos comunes
+.anaconda/
+.conda/
+.continuum/
+.idlerc/
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+.local/
+.matplotlib/
+.vscode/
+*.vsidx
+
+# Ignorar archivos y carpetas de Windows
+Desktop.ini
+Thumbs.db
+NTUSER.DAT*
+
+# Ignorar carpetas de configuraciÃ³n
+.vscode/
+.anaconda/
+.conda/
+.ipynb_checkpoints/
+.continuum/
+.local/
+.pycharm*
+.idea/
+.spss/
+johanna_soler_proyecto_1/
+mi_proyecto_ml/
+miniconda3/
+djsoler.github.io
+educacion_para_el_trabajo_y_desarrollo_humano_colombia
+proyecto_Final_DJSC
+Proy_ciencia_datos_djsol
+webapp-de-Consulta-de-Datos-de-Contrataci-n
+johanna_soler_proyecto_1
+
+# Ignorar archivos temporales de Word y Excel
+Documents/MINE/Semestre II/Seminario de Programacion/Ambientes - Primera Clase.txt
+Documents/MINE/Semestre II/Seminario de Programacion/Clase 2.docx
+Documents/MINE/Semestre II/Seminario de Programacion/Crear repositorio.docx
+Documents/MINE/Semestre II/Seminario de Programacion/Error en C�digo R.html
+Documents/MINE/Semestre II/Seminario de Programacion/GitHub - SP2024MINE_Proyecto_Julio.pdf
+~$*
+*.vsidx
+
+# Ignorar carpetas especificas
+Documents/MINE/Semestre II/Seminario de Programacion/Error en C�digo R_files
 Documents/MINE/Semestre II/Seminario de Programacion/Git
 Documents/MINE/Semestre II/Seminario de Programacion/Git2
 Documents/MINE/Semestre II/Seminario de Programacion/Proyecto_Final_DJSC_23-08-2024
