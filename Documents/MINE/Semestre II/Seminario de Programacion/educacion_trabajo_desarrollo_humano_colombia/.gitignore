@@ -37,3 +37,33 @@ data/
 .matplotlib/
 .vscode/
 *.vsidx
+
+# Ignorar archivos y carpetas de Windows
+Desktop.ini
+Thumbs.db
+NTUSER.DAT*
+
+# Ignorar carpetas de configuración
+.vscode/
+.anaconda/
+.conda/
+.ipynb_checkpoints/
+.continuum/
+.local/
+.pycharm*
+.idea/
+.spss/
+johanna_soler_proyecto_1/
+mi_proyecto_ml/
+miniconda3/
+djsoler.github.io
+educacion_para_el_trabajo_y_desarrollo_humano_colombia
+proyecto_Final_DJSC
+Proy_ciencia_datos_djsol
+webapp-de-Consulta-de-Datos-de-Contrataci-n
+johanna_soler_proyecto_1
+
+# Ignorar archivos temporales de Word y Excel
+~$*
+*.vsidx
+
