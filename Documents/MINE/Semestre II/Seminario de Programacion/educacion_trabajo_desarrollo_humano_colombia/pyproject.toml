@@ -1,4 +1,4 @@
-[tool.poetry]
+[tool.poetry.dependencies]
 name = "poetry-add-streamlit-pandas-requests-sodapy"
 version = "0.1.0"
 description = "La Educación para el Trabajo y Desarrollo Humano ETDH es una opción para muchos Colombianos que buscan trabajo, mejorar sus competencias y condiciones de vida. Se caracteriza por su enfoque práctico y de corta duración, de acuerdo con el MEN, se ofertan más de 21,000 programas en áreas técnicas y laborales en 4,385 instituciones en el país. En menos de tres años, aumentó el número de instituciones en 288."
@@ -7,8 +7,8 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.10,<4.0"
-numpy = "^1.22.4"
+python = ">=3.10<4.0"
+numpy = "^2.1.2"
 scipy = "^1.11.4"
 streamlit = "^1.37.1"
 pandas = "^2.2.2"
