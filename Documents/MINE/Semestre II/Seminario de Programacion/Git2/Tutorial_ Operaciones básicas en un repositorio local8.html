@@ -1,0 +1,275 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Tutorial: Operaciones básicas en un repositorio local</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../../elements/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="git-conceptos-basicos"
+                  title="Tutorial: Operaciones básicas en un repositorio local"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introducción" duration="1">
+        <p>A través del desarrollo de este tutorial pondrá en práctica los diferentes conceptos vistos durante el módulo. </p>
+<p>Se espera que al finalizar usted pueda:</p>
+<ul>
+<li>Crear un repositorio local con Git.</li>
+<li>Manipular los archivos de un repositorio local mediante los comandos básicos: <code>init</code>, <code>add</code>, <code>commit</code>, <code>status</code>, <code>log</code>  y <code>checkout</code>.</li>
+</ul>
+<p>El punto de partida es un proyecto web que contiene diferentes recetas de cocina hispanoamericana. Creará el repositorio y agregará nuevas recetas al sitio web.</p>
+<p>Descargue los archivos del proyecto disponibles en este repositorio: <a href="https://github.com/MOOC-tutorials/git_practice_basic_concepts" target="_blank"><paper-button class="colored" raised>Recetario</paper-button></a></p>
+<p>Utilice la opción <strong>Download ZIP</strong> en el botón <strong>Code</strong>.</p>
+<p class="image-container"><img style="width: 588.50px" src="img/aad3d3ea9671b4b3.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Prerrequisitos" duration="2">
+        <p>Para realizar este tutorial usted debe tener claras las respuestas a las siguientes preguntas:</p>
+<p>Pregunta 1. ¿Qué es un repositorio?</p>
+<p>Pregunta 2. ¿Cuáles son las zonas de trabajo en Git?</p>
+<p>Pregunta 3. ¿Cómo consultar el estado de un repositorio?</p>
+<p>Pregunta 4. ¿Cómo se agregan archivos al área de preparación?</p>
+<p>Pregunta 5. ¿Qué es un <code>commit</code>?</p>
+<p>Pregunta 6. ¿Cómo consultar el historial del repositorio?</p>
+<p>Pregunta 7. ¿Es posible devolverse a una versión anterior?</p>
+<p>Si no es así, por favor revise los videos y el material propuesto antes de seguir. De esta forma podrá sacarle más provecho.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Crear el repositorio" duration="1">
+        <p>3.1. Cree la carpeta <code>/recetario</code> en el directorio de su preferencia.</p>
+<pre><code>$ mkdir recetario</code></pre>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<p>3.2.  Desde <code>Git Bash</code> o la <code>terminal</code> ubíquese en la carpeta.</p>
+<pre><code>$ cd recetario</code></pre>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<p>3.3. Cree un repositorio mediante el comando <code>init</code>. </p>
+<pre><code>$ git init</code></pre>
+<p class="image-container"><img style="width: 747.50px" src="img/5622ba0d9d674afe.png"></p>
+<aside class="special"><p>Este comando crea un directorio oculto llamado <code>.git</code> en la raíz del proyecto. Posteriormente Git coloca toda la información de las versiones y su historia en dicho directorio.</p>
+</aside>
+<p>Verifíquelo consultando los archivos y directorios ocultos en la carpeta.</p>
+<pre><code>$ ls -a</code></pre>
+<p class="image-container"><img style="width: 747.65px" src="img/d8ea1728ba09172d.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Agregar el código base al repositorio local" duration="10">
+        <aside class="warning"><p>Tenga en cuenta el código fuente proporcionado en la Introducción para continuar con esta parte del tutorial.</p>
+</aside>
+<p>4.1. Copie  el contenido de la carpeta <code>/recetario</code> en el directorio de su repositorio local.</p>
+<p>4.2. Consulte el estado de su repositorio.</p>
+<pre><code>$ git status</code></pre>
+<p class="image-container"><img style="width: 602.00px" src="img/a94be5019ee9e619.gif"></p>
+<p>Note que los archivos están  en la copia de trabajo local, pero aún no han sido incluidos al área de preparación. </p>
+<aside class="special"><p>Este comando muestra los diferentes estados de los archivos en la copia de trabajo local y el área de preparación. Permite ver qué archivos están modificados y sin incluir en el área de preparación y cuáles están en el área de preparación pero no han sido confirmados. </p>
+</aside>
+<p>4.3. Añada las carpetas de recetas e imágenes al área de preparación. </p>
+<pre><code>$ git add . //Al ejecutar el comando de esta forma, se están agregando todos los cambios al área de preparación.</code></pre>
+<p class="image-container"><img style="width: 926.15px" src="img/4b7da33bd198d1f.png"></p>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<p>4.4. Consulte el estado de su repositorio e identifique los cambios.</p>
+<pre><code>$ git status</code></pre>
+<p class="image-container"><img style="width: 750.46px" src="img/41c8c289a2574c5d.png"></p>
+<p>Ahora los archivos han sido etiquetados como <code>new file</code>, es decir que se encuentran por primera vez en el área de preparación y están pendientes de ser enviados al repositorio.</p>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<p>4.5. Utilice el comando <code>commit</code> para añadir los archivos que están en el área de preparación al  repositorio .</p>
+<pre><code>$ git commit -m &#34;Se añade codigo base&#34; //La opción -m implica que habrá un mensaje de confirmación asociado al commit</code></pre>
+<p class="image-container"><img style="width: 602.00px" src="img/9d6fa7cd70b1e1b0.gif"></p>
+<p>Note que Git especifica cuántos archivos han sido cambiados y cuántas líneas de código han sido insertadas o eliminadas.</p>
+<p>El autor de un <code>commit</code> debe comentar lo que hizo mediante un breve mensaje. Esto ayuda a otras personas (y a sí mismo) a comprender más adelante el propósito de los cambios.</p>
+<aside class="special"><p>En caso de equivocarse en el <code>commit</code>, puede modificarlo usando la opción <code>amend.</code></p>
+<ul>
+<li>Use el siguiente comando para modificar el mensaje de confirmación.</li>
+</ul>
+<table>
+<tr><td colspan="1" rowspan="1"><p><code>$ git commit --amend -m &#34;nuevo mensaje&#34;</code></p>
+<p> //la opción <code>-m</code> permite escribir un nuevo mensaje desde la línea de comandos sin tener que abrir un editor.</p>
+</td></tr>
+<tr></tr>
+</table>
+<ul>
+<li>Si desea modificar archivos del <code>commit</code>, realice los ajustes correspondientes en la copia de trabajo local, agreguelos al área de preparación y ejecute el siguiente comando.</li>
+</ul>
+<p><code>$ git commit --amend --no-edit </code></p>
+<p>//la opción <code>--no-edit</code> permite hacer las correcciones en la confirmación sin cambiar el mensaje. </p>
+</aside>
+<p>4.6. Consulte el historial de cambios. </p>
+<pre><code>$ git log</code></pre>
+<p class="image-container"><img style="width: 749.08px" src="img/69556dac7ffadab8.png"></p>
+<p>Note que además de la información básica del <code>commit</code>, también es posible identificar la rama donde se realizaron los cambios y el identificador único del mismo. Este último le permitirá buscarlo o devolverse de <code>commit</code> más adelante.</p>
+<aside class="special"><p>Este comando lista en orden cronológico el historial de los <code>commits</code> que se han realizado al repositorio.</p>
+<p>Git también le permite listar el detalle de los cambios que ocurrieron en cada commit. Utilice la bandera <code>-p</code> con el comando <code>git log</code> para agregar este tipo de información.</p>
+</aside>
+<p>En este momento, ya cuenta con el código base del proyecto en el repositorio y está listo para empezar a trabajar en él.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Modificar archivos del repositorio" duration="10">
+        <p>Se ha identificado que la imagen en la receta <strong>Arroz con coco </strong>no corresponde al plato. Ubíquese en el siguiente directorio desde su copia de trabajo local: <code>/recetas/Colombia/arroz_coco.html</code> y corrija la ruta de la imagen por: <code>../../imagenes/arroz-coco.jpg</code></p>
+<p>Una vez realizado el ajuste realice los siguientes pasos:</p>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<p>5.1. Verifique el estado del repositorio.</p>
+<pre><code>$ git status</code></pre>
+<p class="image-container"><img style="width: 602.00px" src="img/6348454a7ce48bc1.gif"></p>
+<p>Ahora el archivo <code>/recetas/Colombia/arroz_coco.html</code> ha sido etiquetado como <code>modified</code> (en color rojo), es decir que Git identificó cambios en el archivo de la copia de trabajo local que aún no han sido movidos al área de preparación.</p>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<p>5.2. Agregue los cambios al área de preparación.</p>
+<pre><code>$ git add recetas/Colombia/arroz_coco.html //de esta forma se agrega archivo específico</code></pre>
+<p class="image-container"><img style="width: 752.50px" src="img/1aea3b68ffb54a3.png"></p>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<p>5.3. Consulte el estado del repositorio para verificar los cambios.</p>
+<pre><code>$ git status</code></pre>
+<p class="image-container"><img style="width: 602.00px" src="img/d83d272a21085bf1.gif"></p>
+<p>El archivo <code>/recetas/Colombia/arroz_coco.html</code> ha sido etiquetado como <code>modified</code> (en color verde), es decir que los cambios ya fueron movidos al área de preparación y están pendientes de guardarse en el repositorio.</p>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<p>5.4. Una vez esté seguro del cambio, confirmelo en el repositorio.</p>
+<pre><code>$ git commit -m &#34;Se modifica ruta de imagen en receta&#34;</code></pre>
+<p class="image-container"><img style="width: 749.00px" src="img/f53e6819c94ce20f.png"></p>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<p>5.5. Consulte el historial de cambios.</p>
+<pre><code>$ git log</code></pre>
+<p class="image-container"><img style="width: 742.50px" src="img/96ef73666240015.png"></p>
+<p>Verifique los 2 <code>commit</code> realizados hasta el momento: su identificador, fecha de creación, autor y mensajes de confirmación.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Consultar las diferencias entre un commit y otro" duration="2">
+        <p>6.1. Utilice el comando <code>diff</code> para consultar las diferencias entre un commit y otro.</p>
+<pre><code>$ git diff &lt;id_commit2&gt;..&lt;id_commit1&gt;</code></pre>
+<p class="image-container"><img style="width: 602.00px" src="img/15c632db9ba06323.gif"></p>
+<p>Tenga en cuenta que este comando requiere tener conocimiento del id de los <code>commit</code>.</p>
+<p>Una vez ejecutado le permite evidenciar el directorio del archivo modificado y las líneas específicas que fueron cambiadas, en este caso la línea roja representa lo que estaba en la versión anterior y la verde lo que está en la versión actual.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Agregar archivos al repositorio" duration="10">
+        <p>Después de agregar el código base y modificar un archivo, es hora de agregar una nueva receta al proyecto. </p>
+<aside class="warning"><p>Tenga en cuenta  los archivos en la carpeta: <code>/files_to_add</code> para continuar con esta parte del tutorial.</p>
+</aside>
+<p>7.1. Copie la carpeta <code>/files_to_add/Mexico</code> en el directorio <code>/recetas</code> de su copia de trabajo local.</p>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<p>7.2. Copie la imagen <code>/files_to_add/imagenes/pozole.jpg</code>  en la carpeta <code>/imagenes</code> de su copia de trabajo local.</p>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<p>7.3. Verifique el estado del repositorio.</p>
+<pre><code>$ git status</code></pre>
+<p class="image-container"><img style="width: 750.41px" src="img/7c3f2744c74feb8e.png"></p>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<p>7.4. Agregue los cambios al área de preparación.</p>
+<pre><code>$ git add .</code></pre>
+<p class="image-container"><img style="width: 926.15px" src="img/4b7da33bd198d1f.png"></p>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<p>7.5. Consulte el estado del repositorio para verificar los cambios.</p>
+<pre><code>$ git status</code></pre>
+<p class="image-container"><img style="width: 747.65px" src="img/68de42af521a8635.png"></p>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<p>7.6. Confirme los cambios en el repositorio.</p>
+<pre><code>$ git commit -m &#34;Se incluye receta mexicana&#34;</code></pre>
+<p class="image-container"><img style="width: 746.32px" src="img/99d5d3e046db6d47.png"></p>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<p>7.7. Consulte el historial de cambios.</p>
+<pre><code>$ git log</code></pre>
+<p class="image-container"><img style="width: 743.48px" src="img/3fbd02a6495f9b17.png"></p>
+<p>Verifique los 3 <code>commit</code> realizados hasta el momento: su identificador, fecha de creación, autor y mensajes de confirmación para realizar la siguiente parte del tutorial.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Devolverse a una versión anterior" duration="5">
+        <p>8.1. Identifique el ID del <code>commit</code> al cual desea regresar y utilice el comando <code>checkout</code>.</p>
+<pre><code>$ git checkout &lt;id_commit&gt;.</code></pre>
+<p class="image-container"><img style="width: 742.50px" src="img/8f08a2b57c384226.png"></p>
+<p>Observe que Git responde con la descripción del <code>commit</code> en el que se encontraba antes de ejecutar el comando y en el que se encuentra ahora.</p>
+<p>8.2. Consulte el historial del repositorio nuevamente.</p>
+<pre><code>$ git log</code></pre>
+<p class="image-container"><img style="width: 743.85px" src="img/5ed94790a8737238.png"></p>
+<p>Ahora se han revertido los cambios y su proyecto se encuentra como en el primer <code>commit</code>.</p>
+<table>
+<tr></tr>
+<tr></tr>
+</table>
+<h2 is-upgraded>Variaciones del comando checkout</h2>
+<p>Para deshacer cambios en su copia de trabajo local, utilice el comando <code>checkout</code> de la siguiente forma:</p>
+<pre><code>$ git checkout HEAD &lt;ruta_archivo&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="../../elements/codelab-elements/native-shim.js"></script>
+  <script src="../../elements/codelab-elements/custom-elements.min.js"></script>
+  <script src="../../elements/codelab-elements/prettify.js"></script>
+  <script src="../../elements/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>
