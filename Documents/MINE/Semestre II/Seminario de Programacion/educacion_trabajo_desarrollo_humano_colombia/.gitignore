@@ -1,6 +1,5 @@
 # Entornos virtuales
 venv/
-__pycache__/
 *.pyc
 *.pyo
 *.pyd
@@ -17,7 +16,6 @@ env/
 .ipynb_checkpoints/
 
 # Datos grandes
-data/
 *.csv
 *.json
 
